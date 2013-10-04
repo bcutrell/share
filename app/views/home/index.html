@@ -1,0 +1,16 @@
+<%- if user_signed_in? -%>  
+<h1>Welcome</h1>
+<%- else -%>
+<div class="controls">
+
+      <%= simple_form_for(User.new, :as => :user, :url => user_registration_path, html: {class: "form-inline" } )  do |f| %>
+
+      <%= f.input :username %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :location %>
+      <%= f.button :submit %>
+
+      <% end %>
+</div>
+ <%- end -%>

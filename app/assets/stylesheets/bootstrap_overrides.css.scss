@@ -1,0 +1,32 @@
+$navbarBackground: #2c3e50;
+$navbarBackgroundHighlight: #95a5a6;
+$navbarText: #eee;
+$navbarLinkColor: #eee;
+
+@import "bootstrap";
+
+body { padding-top: 60px; }
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #ecf0f1;
+}
+
+.good_index  li {
+  list-style: none;
+  text-align: center;
+  vertical-align: middle;
+  display:table-cell;
+  width: 250px;
+  height: 250px;
+}
+.good_index {
+  padding: 0;
+  margin: 0;
+}
+
+.good_index ul {
+  padding: 0;
+  margin: 0;
+}

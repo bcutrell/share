@@ -3,14 +3,20 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'state_machine'
+
+gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
+
+gem 'bootstrap-sass', '~> 2.3.2.1'
+
+gem 'carrierwave'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+gem 'table_print'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
@@ -24,12 +30,29 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+gem 'mini_magick'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+
+gem 'devise'
+
+gem 'simple_form'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'valid_attribute'
+  gem 'launchy'
+  gem 'quiet_assets'
+  gem 'timecop'
 end
 
 # Use ActiveModel has_secure_password
@@ -43,16 +66,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
- 
-group :test, :development do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'factory_girl_rails'
-  gem 'shoulda'
-  gem 'valid_attribute'
-  gem 'launchy'
-  gem 'quiet_assets'
-end
- 
-
