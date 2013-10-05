@@ -10,13 +10,11 @@
     <%= f.input :location %>
     <%= f.file_field :image %>
 
-
-</div>
-  </div>
-
     <div class="form-actions">
-      <%= f.submit :class => 'btn btn-primary' %>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
     </div>
   </fieldset>
 <% end %>
+</div>
+  </div>
