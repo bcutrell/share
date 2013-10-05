@@ -14,7 +14,7 @@ module AuthenticationHelper
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
-    page.attach_file("image", Rack::Test::UploadedFile.new(File.join(Rails.root,'spec', 'support', 'images', 'test.jpg')))
+    attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
     click_button 'Create Good'  
   end
 
