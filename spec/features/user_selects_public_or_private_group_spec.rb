@@ -25,7 +25,5 @@ So that I can access the inventories I am interested in
     user = FactoryGirl.create(:user)
     sign_in_as(user)
     add_public_good 
-    binding.pry
-    expect()
   end 
 end

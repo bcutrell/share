@@ -6,7 +6,7 @@ FactoryGirl.define do
     association :user
     
     trait :with_image do
-      picture { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec', 'support', 'images', ''))}
+      image { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec', 'support', 'images', 'test.jpg'))}
     end
   end
 end
