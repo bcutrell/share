@@ -7,13 +7,14 @@ module AuthenticationHelper
     click_button 'Sign in'
   end
 
-  def add_good
-    visit welcome_dashboard_path
-    click_link 'Post item'
+  def add_public_good
+    visit home_dashboard_path
+    click_on 'Public'
+    click_on 'Post item'
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
-    page.attach_file("picture", Rack::Test::UploadedFile.new(File.join(Rails.root,'spec', 'support', 'good_images', 'DSC00391.JPG')))
+    page.attach_file("image", Rack::Test::UploadedFile.new(File.join(Rails.root,'spec', 'support', 'images', 'test.jpg')))
     click_button 'Create Good'  
   end
 

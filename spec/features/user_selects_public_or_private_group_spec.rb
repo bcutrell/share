@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-
 feature 'user can select public or private group', %Q{
 As an authenticated user
 I want to choose whether I want to access a public or private group
@@ -15,19 +14,18 @@ So that I can access the inventories I am interested in
 # * If I make the wrong choice I can go back by 
 # clicking an icon at the bottom of the page
 
-scenario 'I choose public' do 
-  user = FactoryGirl.create(:user)
-  sign_in_as(user)
-  click_on "Public"
-  click_on "Post item"
+  scenario 'I choose public' do 
+    user = FactoryGirl.create(:user)
+    sign_in_as(user)
+    click_on "Public"
+    click_on "View items"
+    end
 
-  expect(page).to have_content("Public")
-  end
-
-
-scenario 'I post a public good' do 
-
-end 
-
-
+  scenario 'I post a public good' do 
+    user = FactoryGirl.create(:user)
+    sign_in_as(user)
+    add_public_good 
+    binding.pry
+    expect()
+  end 
 end
