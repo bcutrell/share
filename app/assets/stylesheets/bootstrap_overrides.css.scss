@@ -1,17 +1,13 @@
-$navbarBackground: #2c3e50;
-$navbarBackgroundHighlight: #95a5a6;
-$navbarText: #eee;
-$navbarLinkColor: #eee;
+// $navbarBackground: #2c3e50;
+// $navbarBackgroundHighlight: #95a5a6;
+// $navbarText: #eee;
+// $navbarLinkColor: #eee;
 
 @import "bootstrap";
 
 body { padding-top: 60px; }
 
 @import "bootstrap-responsive";
-
-.navbar .brand {
-  color: #ecf0f1;
-}
 
 .good_index  li {
   list-style: none;
@@ -29,4 +25,77 @@ body { padding-top: 60px; }
 .good_index ul {
   padding: 0;
   margin: 0;
+}
+
+#main 
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero
+{
+background-color: #5397AB;
+min-height: 500px;
+}
+
+.welcome_box
+{
+  font-weight: 600;
+  background: rgba(255,255,255,0.6);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+  border: 1px solid #ccc;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+}
+
+.index_form_box
+{
+  margin-top: 20px;
+  text-align: center;
+  background: #FFFFFF;
+  padding: 20px;
+  top: 0;
+  border: 1px solid #ccc;
+  position: relative;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
+}
+
+.index_form_box input[type="submit"]
+{
+height:30px;
+width: 220px;
+background: #0088cc;
+color:white;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+padding-right: 12px;
+padding-left: 12px;
+margin-right: 2px;
+line-height: 14px;
+}
+
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
 }

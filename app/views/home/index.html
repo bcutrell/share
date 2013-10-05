@@ -1,16 +1,30 @@
+
+
+
+
+
+<div class="hero clearfix">
+<div class="span6 welcome_box">
+Hello!
+</div>
+<div class="span4 index_form_box">
 <%- if user_signed_in? -%>  
 <h1>Welcome</h1>
 <%- else -%>
-<div class="controls">
-
-      <%= simple_form_for(User.new, :as => :user, :url => user_registration_path, html: {class: "form-inline" } )  do |f| %>
-
-      <%= f.input :username %>
-      <%= f.input :email %>
-      <%= f.input :password %>
-      <%= f.input :location %>
+      <%= simple_form_for(User.new, :as => :user, :url => user_registration_path) do |f| %>
+      <%= f.input :username,placeholder: "Username", label: false %>
+      <%= f.input :email,placeholder: "Email", label: false %>
+      <%= f.input :password,placeholder: "Password", label: false %>
+      <%= f.input :location,placeholder: "Location", label: false %>
       <%= f.button :submit, "Join" %>
-
       <% end %>
-</div>
  <%- end -%>
+
+
+</div>
+
+
+</div>
+
+
+
