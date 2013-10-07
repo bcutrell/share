@@ -9,7 +9,8 @@ class GoodsController < ApplicationController
   end
 
   def create
-    @good = Good.new(reg_params)
+    build_good
+
     if @good.save
       flash[:notice] = "Thanks for sharing"
       redirect_to home_dashboard_path
@@ -22,10 +23,12 @@ class GoodsController < ApplicationController
     @good = Good.find(params[:id])
   end
 
-
   protected
   def reg_params
     params.require(:good).permit(:title, :description, :location, :image, :user_id)
   end
 
+  def build_good
+    @good = Good.new(reg_params)
+  end
 end

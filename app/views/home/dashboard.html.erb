@@ -33,7 +33,13 @@
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-        <%= link_to "Post a Private item", new_good_path, :class => 'btn' %>
+        <%= link_to "Create New Group", new_group_path, :class => 'btn' %>
+      </div>
+        <div class="accordion-inner">
+        <%= link_to "Join Group", new_group_membership_path, :class => 'btn' %>
+      </div>
+        <div class="accordion-inner">
+        <%= link_to "View Groups", groups_path, :class => 'btn' %>
       </div>
     </div>
   </div>

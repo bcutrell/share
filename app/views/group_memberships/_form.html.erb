@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="span6">
+<%= simple_form_for @group_member, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Member</legend>
+
+    <%= f.association :group, label: "Group Name" %>
+
+
+    <div class="form-actions">
+      <%= f.submit 'Join Group', :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
+    </div>
+
+  </fieldset>
+<% end %>
+</div>
+  </div>
