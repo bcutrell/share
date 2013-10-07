@@ -18,17 +18,16 @@ feature 'posts an item', %Q{
 # * If I create a good privately it can only be seen in the private group
 
   scenario 'I successfully post an item' do
-
     user = FactoryGirl.create(:user)
     sign_in_as(user)
 
     click_link 'Post item'
-
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
     attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
     click_on 'Create Good'
+    
     expect(page).to have_content('Thanks for sharing')
   end
 
@@ -38,9 +37,7 @@ feature 'posts an item', %Q{
     sign_in_as(user)
 
     visit group_path(group)
-
     click_on "Add Item"
-
     fill_in "Title", with: "chair"
     fill_in "Description", with: "good for sitting on"
     fill_in "Location", with: "Boston"
