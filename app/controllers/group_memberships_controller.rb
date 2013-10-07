@@ -9,8 +9,9 @@ class GroupMembershipsController < ApplicationController
   end
 
   def create
-    @group_member = GroupMembership.new(reg_params)
-    @group_member.user_id = current_user.id 
+    @group_member = current_user.group_memberships.build(reg_params)
+    # binding.pry 
+
     if @group_member.save
       flash[:notice] = "Welcome To The Group!"
       redirect_to home_dashboard_path

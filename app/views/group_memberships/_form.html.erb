@@ -7,6 +7,9 @@
     <%= f.association :group, label: "Group Name" %>
 
 
+    <%= f.input :password %>
+
+
     <div class="form-actions">
       <%= f.submit 'Join Group', :class => 'btn btn-primary' %>
       <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
