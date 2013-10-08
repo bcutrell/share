@@ -11,6 +11,10 @@ gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
 
 gem 'bootstrap-sass', '~> 2.3.2.1'
 
+gem "flat-ui-rails"
+
+gem "font-awesome-rails"
+
 gem 'carrierwave'
 
 # Use Uglifier as compressor for JavaScript assets
