@@ -1,20 +1,19 @@
-
 <div class="row">
   <div class="span6">
-<%= simple_form_for @good, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
-  <fieldset>
-    <legend><%= controller.action_name.capitalize %> Good </legend>
+    <%= simple_form_for [group, good], :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+      <fieldset>
+        <legend><%= controller.action_name.capitalize %> Good </legend>
 
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :location %>
-    <%= f.file_field :image %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :location %>
+        <%= f.file_field :image %>
 
-    <div class="form-actions">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
-    </div>
-  </fieldset>
-<% end %>
-</div>
+        <div class="form-actions">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
+        </div>
+      </fieldset>
+    <% end %>
   </div>
+</div>

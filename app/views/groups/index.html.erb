@@ -1,0 +1,14 @@
+<div class="hero">
+  <div class= "index_form_box span4 center"> 
+    <strong> Groups </strong>
+  </div>
+<div class= "welcome_box span4 center show_group_list"> 
+<% @groups.each do |group| %> 
+  <ul>
+    <li> 
+      <%= link_to "#{group.name}", group_path(group), :class => 'btn' %>
+    </li>
+  </ul>
+<% end %>
+</div>
+</div>

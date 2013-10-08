@@ -18,4 +18,14 @@ module AuthenticationHelper
     click_button 'Create Good'  
   end
 
+  def add_group
+    visit home_dashboard_path
+    click_on "Create New Group"
+    # sequence(:email) { |n| "#{n}dnasty116@yahoo.com"}
+    fill_in 'Group Name', with: "PatsFans"
+    fill_in 'Password', with: "password"
+
+    click_button 'Create Group'
+  end
+
 end

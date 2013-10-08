@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :group do
-    name "MyString"
-    password "MyString"
+    name "NewGroup"
+    password "password"
   end
 end
