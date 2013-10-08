@@ -35,13 +35,16 @@ body { padding-top: 60px; }
 
 .hero
 {
-background-color: #5397AB;
+background: url("http://farm3.staticflickr.com/2446/3981988497_d54440b227_b.jpg");
+background-size: 100% 100%;
+background-repeat: no-repeat;
+// background-color: #5397AB;
 min-height: 500px;
 }
 
 .welcome_box
 {
-  font-weight: 600;
+  // font-weight: 600;
   background: rgba(255,255,255,0.6);
   padding: 20px;
   margin-top: 20px;
@@ -98,4 +101,9 @@ line-height: 14px;
      float: none;
      margin-left: auto;
      margin-right: auto;
+}
+
+.show_group_list ul 
+{
+list-style: none;
 }

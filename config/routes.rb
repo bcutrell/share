@@ -5,10 +5,15 @@ Share::Application.routes.draw do
 
   devise_for :users
 
-
-
   get "home/dashboard"
   root 'home#index'
+
+  resources :groups do
+    resources :goods, only: [:new, :create], controller: :group_goods
+  end
+
+resources :group_memberships
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

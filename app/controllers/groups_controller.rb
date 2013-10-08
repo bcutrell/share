@@ -1,17 +1,18 @@
-class GoodsController < ApplicationController
+class GroupsController < ApplicationController
 
   def new
-    @good = Good.new
+    @group = Group.new
   end
 
   def index
-    @goods = Good.all
+    @groups = Group.member_of(current_user)
   end
 
   def create
-    @good = Good.new(reg_params)
-    if @good.save
-      flash[:notice] = "Thanks for sharing"
+    @group = Group.new(reg_params)
+    @group.users << current_user
+    if @group.save
+      flash[:notice] = "Group Created"
       redirect_to home_dashboard_path
     else
       render :new
@@ -19,13 +20,18 @@ class GoodsController < ApplicationController
   end
 
   def show
-    @good = Good.find(params[:id])
+    @group = Group.find(params[:id])
   end
+
+  def join
+    
+  end
+
 
 
   protected
   def reg_params
-    params.require(:good).permit(:title, :description, :location, :image, :user_id)
+    params.require(:group).permit(:name, :password)
   end
 
 end

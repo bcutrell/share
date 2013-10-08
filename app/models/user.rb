@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :goods, inverse_of: :user
 
+  has_many :groups, through: :group_memberships
+
+  has_many :group_memberships,
+  inverse_of: :user 
+
 end
