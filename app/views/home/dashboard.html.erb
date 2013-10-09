@@ -1,49 +1,49 @@
-<div class="hero">
-<div class= "row">
-<div class="span4 center welcome_box">Start Sharing</div>
-</div>
+<div class="hero clearfix">
+  <div class= "row">
+    <div class="span4 center welcome_box">Start Sharing</div>
+  </div>
 
-<div class="row">
-<div class="index_form_box span4 center">
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+  <div class="row">
+    <div class="index_form_box span4 center">
+      <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne" style="text-decoration:none; color:#2dafc0">
         Public
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <%= link_to "Post item", new_good_path, :class => 'btn' %>
+            </a>
+          </div>
+        <div id="collapseOne" class="accordion-body collapse">
+        <div class="accordion-inner">
+          <%= link_to "Post item", new_good_path, :class => 'btn' %>
+        </div>
+        <div class="accordion-inner">
+          <%= link_to "View items", goods_path, :class => 'btn' %>
+        </div>
+        </div>
       </div>
-      <div class="accordion-inner">
-        <%= link_to "View items", goods_path, :class => 'btn' %>
-      </div>
     </div>
-  </div>
-</div>
 
 
-<div class="accordion" id="accordion3">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo">
+  <div class="accordion" id="accordion3">
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo" style="text-decoration:none; color:#2dafc0">
         Private
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <%= link_to "Create New Group", new_group_path, :class => 'btn' %>
+        </a>
       </div>
-        <div class="accordion-inner">
-        <%= link_to "Join Group", new_group_membership_path, :class => 'btn' %>
-      </div>
-        <div class="accordion-inner">
-        <%= link_to "View Groups", groups_path, :class => 'btn' %>
+          <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+            <%= link_to "Create New Group", new_group_path, :class => 'btn' %>
+            </div>
+            <div class="accordion-inner">
+              <%= link_to "Join Group", new_group_membership_path, :class => 'btn' %>
+            </div>
+            <div class="accordion-inner">
+              <%= link_to "View Groups", groups_path, :class => 'btn' %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-</div>
 </div>

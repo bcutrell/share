@@ -1,30 +1,26 @@
 
-
-
-
-
 <div class="hero clearfix">
-<div class="span6 welcome_box">
-Hello!
-</div>
-<div class="span4 index_form_box">
-<%- if user_signed_in? -%>  
-<h1>Welcome</h1>
-<%- else -%>
-      <%= simple_form_for(User.new, :as => :user, :url => user_registration_path) do |f| %>
-      <%= f.input :username,placeholder: "Username", label: false %>
-      <%= f.input :email,placeholder: "Email", label: false %>
-      <%= f.input :password,placeholder: "Password", label: false %>
-      <%= f.input :location,placeholder: "Location", label: false %>
-      <%= f.button :submit, "Join" %>
+  <div class="container">
+    <div class="span6 welcome_box">Hello!</div>  
+      <div class="span4 index_form_box pull-right">
+      <%- if user_signed_in? -%>  
+        <h1>Welcome</h1>
+      <%- else -%>
+        <%= simple_form_for(User.new, :as => :user, :url => user_registration_path) do |f| %>
+        <%= f.input :username,placeholder: "Username", label: false %>
+        <%= f.input :email,placeholder: "Email", label: false %>
+        <%= f.input :password,placeholder: "Password", label: false %>
+        <%= f.input :location,placeholder: "Location", label: false %>
+        <%= f.button :submit, "Join", class: "" %>
+        <% end %>
       <% end %>
- <%- end -%>
-
-
+      </div>
+  </div>
 </div>
 
+<div class="container">
 
+<h1>What we do</h1>
+
+<i class="icon-group"></i> icon-group
 </div>
-
-
-
