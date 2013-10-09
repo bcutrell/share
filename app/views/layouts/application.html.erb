@@ -8,10 +8,6 @@
 <body>
 
 <div class="container">
-
-<!--     <img src="http://tx5.engine.flamingtext.com/netfu/tmp28011/coollogo_com-225901606.png" height="100px" style="display: inline" class="pull-left"> -->
-
-
   <ul class="nav nav-pills pull-right">
   <li class="pull-left <%= 'active' if current_page?(root_path)  %>">
     <%= link_to "Home", root_path, class: "brand" %>
@@ -24,7 +20,7 @@
             <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
             </li>
             <%- end -%>
-</ul>
+  </ul>
 </div>
 
 
@@ -35,6 +31,7 @@
     <%= msg %>
     <% end %>
   </div>
+</div>
 
 
       <%= yield %>
