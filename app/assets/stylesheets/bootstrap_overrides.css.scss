@@ -3,11 +3,31 @@
 // $navbarText: #eee;
 // $navbarLinkColor: #eee;
 
+// @import "font-awesome";
 @import "bootstrap";
-
-body { padding-top: 60px; }
-
+@import "flat-ui";
 @import "bootstrap-responsive";
+
+
+// *
+// {
+//   margin:0;
+//   padding:0
+// }
+
+.nav
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.nav-pills > li > a
+{
+  text-decoration: none;
+  color:#2dafc0
+}
+
+
 
 .good_index  li {
   list-style: none;
@@ -39,7 +59,11 @@ background: url("http://farm3.staticflickr.com/2446/3981988497_d54440b227_b.jpg"
 background-size: 100% 100%;
 background-repeat: no-repeat;
 // background-color: #5397AB;
-min-height: 500px;
+min-height: 600px;
+border-top: 1px solid #999;
+border-bottom: 1px solid #999;
+// -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
+box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
 }
 
 .welcome_box
