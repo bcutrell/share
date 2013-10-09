@@ -21,11 +21,21 @@
   margin-bottom: 10px;
   margin-top: 10px;
 }
+.nav-pills > .active > a
+{
+  background-color: #7CB9B1
+}
+
+.nav-pills > .active > a:hover
+{
+  background-color: #496D68
+}
 
 .nav-pills > li > a
 {
   text-decoration: none;
-  color:#2dafc0
+  // color:#2dafc0
+  color:#496D68
 }
 
 
@@ -67,7 +77,7 @@ border-bottom: 1px solid #999;
 box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0 2px 0 #fff,0 -1px 0 #fff;
 }
 
-.welcome_box
+.clear_box
 {
   // font-weight: 600;
   background: rgba(255,255,255,0.6);
@@ -89,8 +99,10 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0
   box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
 }
 
-.index_form_box
+.white_box
 {
+  color: rgb(69, 85, 96);
+  // color: #496D68;
   margin-top: 20px;
   text-align: center;
   background: #FFFFFF;
@@ -108,7 +120,7 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0
   box-shadow: 0 0 4px rgba(0,0,0,0.2),inset 0 0 50px rgba(0,0,0,0.1);
 }
 
-.index_form_box input[type="submit"]
+.white_box input[type="submit"]
 {
 height:30px;
 width: 220px;
@@ -138,8 +150,14 @@ i
   margin-right: 10px;
 }
 
+.logo_title
+{
+  display: inline-table;
+}
+
 .icon_row
 {
   margin: 40px;
   color: rgb(69, 85, 96)
 }
+
