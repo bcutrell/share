@@ -16,28 +16,47 @@ So that I can access the inventories I am interested in
 
   scenario 'I choose public' do 
     user = FactoryGirl.create(:user)
-    public_good = FactoryGirl.create(:good, :public)
+    public_good = FactoryGirl.create(:good, :with_image, :public)
     sign_in_as(user)
+
     click_on "Public"
     click_on "View items"
 
     expect(page).to have_image public_good.image.thumb.url
     end
 
-  scenario 'I choose a private group' do 
+  scenario 'I join a private good' do 
     user = FactoryGirl.create(:user)
     group = FactoryGirl.create(:group)
-    private_good = FactoryGirl.create(:good, :public)
+    private_good = FactoryGirl.create(:good, :with_image, :public)
     sign_in_as(user)
     
     click_on "Private"
     click_on "Join Group"
 
-    select(group.name, :from => 'Group Name')
+    fill_in 'Group', with: group.name
+    fill_in 'Password', with: group.password 
     click_on "Join Group"
 
     expect(page).to have_content("Welcome To The Group!")
     expect(group.users.first).to eql(user)
+  end 
+
+    scenario 'I fail to join a private group' do 
+        user = FactoryGirl.create(:user)
+        group = FactoryGirl.create(:group)
+        private_good = FactoryGirl.create(:good, :with_image, :public)
+        sign_in_as(user)
+        
+        click_on "Private"
+        click_on "Join Group"
+
+        fill_in 'Group', with: "Not a group name"
+        fill_in 'Password', with: "This is not the password"
+        click_on "Join Group"
+
+        expect(page).to have_content("Incorrect Password, try again")
+        expect(group.users.first).to_not eql(user)
   end 
 
 

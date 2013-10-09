@@ -10,12 +10,11 @@ class GroupMembershipsController < ApplicationController
 
   def create
     @group_member = current_user.group_memberships.build(reg_params)
-    # group_id = params["group_membership"]["group_id"]
-    group_name = params["group_membership"]["group"]
-    # @group = Group.where(name: group_name).first
+    group_name = params["group_membership"]["group"]    
     password = params["group_membership"]["password"]
-    binding.pry
-    if Group.where(name: group_name, password: password).present?
+    @group ||= Group.where(name: group_name, password: password).first
+    if !@group.nil?
+      @group_member.group = @group 
       @group_member.save
       flash[:notice] = "Welcome To The Group!"
       redirect_to home_dashboard_path
@@ -23,9 +22,6 @@ class GroupMembershipsController < ApplicationController
       flash[:notice] = "Incorrect Password, try again"
       render :new
     end
-
-    # Group.where(password: "password").present?
-    # Group.where(name: "name").present?
   end
 
   protected
