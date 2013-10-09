@@ -7,6 +7,7 @@
 @import "bootstrap";
 @import "flat-ui";
 @import "bootstrap-responsive";
+@import "font-awesome";
 
 
 // *
@@ -130,4 +131,15 @@ line-height: 14px;
 .show_group_list ul 
 {
 list-style: none;
+}
+
+i 
+{
+  margin-right: 10px;
+}
+
+.icon_row
+{
+  margin: 40px;
+  color: rgb(69, 85, 96)
 }
