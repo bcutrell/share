@@ -1,12 +1,8 @@
-
-   <% @goods.each do |good| %>
-    <div class="span3 good_index">
-
-      <ul>
-        <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
-    
-      </ul>
-
-    </div>
-        <% end %> 
+<% @goods.each do |good| %>
+  <div class="span3 good_index">
+    <ul>
+      <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
+    </ul>
+  </div>
+<% end %> 
       
