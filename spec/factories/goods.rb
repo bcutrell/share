@@ -10,10 +10,10 @@ FactoryGirl.define do
     end
 
     trait :public do 
-      state "public"
+      private false
     end
     trait :private do 
-      state "private"
+      private true 
     end 
 
     trait :in_group do 

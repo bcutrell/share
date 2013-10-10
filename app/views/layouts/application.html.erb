@@ -2,12 +2,22 @@
 <html>
 <head>
   <title>Share</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <div class="container">
+  <div class="color_logo">
+  <ul class=" nav nav-pills pull-left ">
+    <li><a href="#" class="box_one"></a></li>
+    <li><a href="#" class="box_two"></a></li>
+    <li><a href="#" class="box_three"></a></li>
+    <li><a href="#" class="box_four"></a></li>
+  </ul>
+  </div>
+
+
   <ul class="nav nav-pills pull-right">
   <li class="pull-left <%= 'active' if current_page?(root_path)  %>">
     <%= link_to "Home", root_path, class: "brand" %>
@@ -17,6 +27,7 @@
             <li class="<%= 'active' if params[:controller] == 'devise/sessions' %>"><%= link_to 'Sign In', new_user_session_path %></li>
             <%- else -%>
             <li class="<%= 'active' if current_page?(home_dashboard_path) %>"><%= link_to 'Dashboard', home_dashboard_path %></li>
+            <li class="<%= 'active' if current_page?(home_inventory_path) %>"><%= link_to 'Goods', home_inventory_path %></li>
             <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
             </li>
             <%- end -%>

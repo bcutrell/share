@@ -182,6 +182,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   bootstrap-sass (~> 2.3.2.1)
   capybara
   carrierwave

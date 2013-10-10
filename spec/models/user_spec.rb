@@ -9,8 +9,8 @@ describe User do
   
   # it { should_not have_valid(:group).when(Group.new) }
 
-it { should have_valid(:username).when("gentlebuffalo") }
-it { should_not have_valid(:username).when("", nil) }
+# it { should have_valid(:username).when("gentlebuffalo") }
+# it { should_not have_valid(:username).when("", nil) }
 
 it { should have_valid(:email).when("bcutrell@gmail.com") }
 it { should_not have_valid(:email).when("bcutrell", "12345", 12345, nil) }

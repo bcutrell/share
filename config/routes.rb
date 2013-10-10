@@ -1,11 +1,15 @@
 Share::Application.routes.draw do
 
 
-  resources :goods
+  resources :goods 
+
+
+
 
   devise_for :users
 
   get "home/dashboard"
+  get "home/inventory"
   root 'home#index'
 
   resources :groups do
