@@ -25,7 +25,7 @@ So that I can access the inventories I am interested in
     expect(page).to have_image public_good.image.thumb.url
     end
 
-  scenario 'I join a private good' do 
+  scenario 'I join a private group' do 
     user = FactoryGirl.create(:user)
     group = FactoryGirl.create(:group)
     private_good = FactoryGirl.create(:good, :with_image, :public)
@@ -35,7 +35,7 @@ So that I can access the inventories I am interested in
     click_on "Join Group"
 
     fill_in 'Group', with: group.name
-    fill_in 'Password', with: group.password 
+    fill_in 'Password', with: group.password_hash 
     click_on "Join Group"
 
     expect(page).to have_content("Welcome To The Group!")

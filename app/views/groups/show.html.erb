@@ -1,7 +1,24 @@
-<% @group %>
+<div class="container">
+  <div class="row">
+    <div class= "span2 center">
+      <%= @group.name %>      
+    </div>
+  </div>
+  <div class="row">
+    <div class= "span4 center">
+      <%= link_to "Add Item", new_group_good_path(@group), class: 'btn center' %>
+    </div>
+  </div>
 
-<div class= "span4 center">
-  <%= link_to "Add Item", new_group_good_path(@group), class: 'btn' %>
+  <div class="row">
+    <% if @group.goods.present? %>
+      <% @group.goods.each do |good| %>
+            <div class="span3 good_index">
+            <ul>
+              <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, group_goods_path(good) %></li>
+            </ul>
+          </div>
+      <% end %> 
+    <% end %> 
+  </div>
 </div>
-
-<!-- @group.goods.first.state -->
