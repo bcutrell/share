@@ -9,21 +9,26 @@
 @import "bootstrap-responsive";
 @import "font-awesome";
 
-.color_logo:nth-child(1) 
+// .color_logo:nth-child(1) 
+// {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .color_logo ul  
+// {
+//   margin-top: 7.5px;
+//   margin-bottom: 0px;
+//   margin-left: 30px
+// }
+
+.share_logo
 {
-  margin: 0;
-  padding: 0;
+  height:54px;
+  // width: 300px;
+  // margin-left: 20px
 
 }
-
-.color_logo ul  
-{
-  margin-top: 7.5px;
-  margin-bottom: 0px;
-  margin-left: 30px
-  
-}
-
 .box_one
 {
   background-color: #435258;
@@ -125,6 +130,7 @@ box-shadow: 0 5px 10px rgba(0,0,0,0.2) inset,0 -5px 20px rgba(0,0,0,0.2) inset,0
   // font-weight: 600;
   background: rgba(255,255,255,0.6);
   padding: 20px;
+  margin-left: 0;
   margin-top: 20px;
   text-align: center;
   color: #333;
@@ -224,7 +230,7 @@ i
 
 .icon_row
 {
-  margin: 40px;
+  margin: 40px 40px 40px 0px;
   color: rgb(69, 85, 96)
 }
 
