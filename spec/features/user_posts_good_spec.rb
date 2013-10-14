@@ -48,4 +48,8 @@ feature 'posts an item', %Q{
     expect(Good.last.private).to eql(true)
     expect(Good.last.group).to eql(group)
   end
+
+  scenario 'I specify a category' do 
+
+  end 
 end

@@ -13,6 +13,13 @@ feature 'User provides the location of a good', %Q{
 # * When someone views the good they can see the location on google maps 
 
   scenario 'My group has an encrpted password' do 
-  # http://railscasts.com/episodes/273-geocoder
+    good = FactoryGirl.create(:good, :with_image, location: "17 braddock park, Boston, MA")
+    user = good.user
+    sign_in_as(user)
+
+    visit good_path(good.id)
+
+    expect(page).to have_image good.image.thumb.url
+    expect(page).to have_content("Google maps location")
   end
 end

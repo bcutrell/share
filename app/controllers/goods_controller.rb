@@ -23,10 +23,6 @@ class GoodsController < ApplicationController
     @good = Good.find(params[:id])
   end
 
-  def all
-    binding.pry 
-  end
-
   protected
   def reg_params
     params.require(:good).permit(:title, :description, :location, :image, :user_id)
