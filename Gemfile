@@ -17,7 +17,7 @@ gem "font-awesome-rails"
 
 gem 'carrierwave'
 
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'geocoder'
 

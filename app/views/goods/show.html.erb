@@ -1,9 +1,29 @@
 <div class="container">
-<%= image_tag @good.image.thumb.url, :class => "img-polaroid" %>
-<%= @good.title %>
+  <div class="row show_good_row">
+  <div class="span4">
+    <%= image_tag @good.image.thumb.url, :class => "img-polaroid" %>
+  </div>
+  <div class="span6">
+    <h4>Title</h4>
+    <%= @good.title %>
+    <br>
+    <h4>Description</h4>
+    <%= @good.description %>
+    <br>
+    <h4>Location</h4>
+    <%= @good.location %>
+
+  </div>
+</div>
+  <div class="row">
+<div class="span6">
 <p>ADD A CLAIM BUTTON AND GPS INFORMATION!</p>
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@good.location}%2C#{@good.location}" %>
+
+</div>
+  </div>
+
 
 
 

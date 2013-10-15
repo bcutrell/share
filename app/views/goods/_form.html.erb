@@ -7,6 +7,8 @@
           <%= f.input :title %>
           <%= f.input :description %>
           <%= f.input :location %>
+          <%-# f.input :categories, as: :select, collection: Category.rooms %> 
+          <%= f.association :categories %>
           <%= f.file_field :image, class: "file_field" %>
           <div class="form-actions">
             <%= f.submit nil, :class => 'btn btn-primary' %>

@@ -13,17 +13,11 @@ function house_hover(element, text){
     });
 }
 
-// function show_all(element, text){
-//   $('#show_button').click(function(){
-//   $(element).removeClass("on_room");
-//   $('.house_text').html("");
-//   $(element).addClass("on_room");
-//   $('<div/>', {
-//         class: 'center house_text',
-//         text: text
-//       }).appendTo(element);
-//   });
-// }
+function show_all(element, text){
+  $('#show_button').click(function(){
+  $(element).toggleClass("on_room");
+  });
+}
 
 var $kitchen = $("#kitchen");
 var $foyer = $("#foyer");
@@ -41,10 +35,10 @@ house_hover($bedroom, "Bedroom");
 house_hover($storage, "Storage");
 house_hover($bathroom, "Bathroom");
 
-// show_all($kitchen, "Kitchen");
-// show_all($foyer, "Foyer");
-// show_all($living_room, "Living Room");
-// show_all($hallway, "Hallway");
-// show_all($bedroom, "Bedroom");
-// show_all($storage, "Storage");
-// show_all($bathroom, "Bathroom");
+show_all($kitchen, "Kitchen");
+show_all($foyer, "Foyer");
+show_all($living_room, "Living Room");
+show_all($hallway, "Hallway");
+show_all($bedroom, "Bedroom");
+show_all($storage, "Storage");
+show_all($bathroom, "Bathroom");

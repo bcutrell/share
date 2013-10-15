@@ -18,8 +18,6 @@ feature 'User provides the location of a good', %Q{
     sign_in_as(user)
 
     visit good_path(good.id)
-
-    expect(page).to have_image good.image.thumb.url
-    expect(page).to have_content("Google maps location")
+    
   end
 end
