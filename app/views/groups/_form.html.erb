@@ -6,7 +6,9 @@
     <legend><%= controller.action_name.capitalize %> Group </legend>
 
     <%= f.input :name, label: "Group Name" %>
-    <%= f.input :password %>
+    <%= f.input :password, class: "group_password" %>
+    <%= f.input :password_confirmation, class: "group_password_confirmation"%>
+
 
     <div class="form-actions">
       <%= f.submit nil, :class => 'btn btn-primary' %>

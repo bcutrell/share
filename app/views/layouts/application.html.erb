@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="container">
+<!-- <div class="container">
   <div class="color_logo">
   <ul class=" nav nav-pills pull-left ">
     <li><a href="#" class="box_one"></a></li>
@@ -16,7 +16,10 @@
     <li><a href="#" class="box_four"></a></li>
   </ul>
   </div>
+ -->
 
+<div class="container">
+  <%= image_tag "share_logo.png", class: "share_logo pull-left" %> 
 
   <ul class="nav nav-pills pull-right">
   <li class="pull-left <%= 'active' if current_page?(root_path)  %>">
@@ -44,23 +47,8 @@
   </div>
 </div>
 
-
-      <%= yield %>
-
-
-     <script>
-$('.navbar li').click(function(e) {
-    $('.navbar li.active').removeClass('active');
-    var $this = $(this);
-    if (!$this.hasClass('active')) {
-        $this.addClass('active');
-    }
-    e.preventDefault();
-});
-  </script>
-
+    <%= yield %>
  
+ <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
-     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
-  </html>
+</html>

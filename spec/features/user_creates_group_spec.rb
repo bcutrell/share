@@ -16,12 +16,16 @@ feature 'user creates a group', %Q{
     scenario 'I create a group' do 
         user = FactoryGirl.create(:user)
         sign_in_as(user)
-
         prev_count = Group.count
 
         click_on "Create New Group"
         fill_in 'Group Name', with: "PatsFans"
-        fill_in 'Password', with: "password"
+         within(:css, ".group_password") do
+              fill_in 'Password', :with => 'password'
+        end
+        within(:css, ".group_password_confirmation") do
+              fill_in 'Password', :with => 'password'
+        end
         click_button 'Create Group'
 
         expect(page).to have_content("Group Created")
@@ -31,9 +35,9 @@ feature 'user creates a group', %Q{
     scenario 'I view my groups' do 
         user = FactoryGirl.create(:user)
         sign_in_as(user)
+        
         add_group 
         visit home_dashboard_path
-
         click_on "View Groups"
     
         expect(page).to have_content(user.groups.first.name)
