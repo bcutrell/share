@@ -10,10 +10,13 @@ class GroupMembershipsController < ApplicationController
 
   def create
     @group_member = current_user.group_memberships.build(reg_params)
-    group_name = params["group_membership"]["group"]    
-    password = params["group_membership"]["password"]
-    @group ||= Group.where(name: group_name, password_hash: password).first
-    if !@group.nil?
+    @group = Group.find_by_name(params["group_membership"]["group"])
+
+    # group_name = params["group_membership"]["group"]    
+    # password = params["group_membership"]["password"]
+    # @group ||= Group.where(name: group_name, password_hash: password).first
+    
+    if @group && @group.authenticate(params["group_membership"]["password"])
       @group_member.group = @group 
       @group_member.save
       flash[:notice] = "Welcome To The Group!"
@@ -23,6 +26,8 @@ class GroupMembershipsController < ApplicationController
       render :new
     end
   end
+
+  # somalianpirates
 
   protected
   def reg_params

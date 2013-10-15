@@ -10,6 +10,7 @@ Share::Application.routes.draw do
 
   get "home/dashboard"
   get "home/inventory"
+  get "home/house"
   root 'home#index'
 
   resources :groups do

@@ -31,7 +31,7 @@ class GroupsController < ApplicationController
 
   protected
   def reg_params
-    params.require(:group).permit(:name, :password)
+    params.require(:group).permit(:name, :password, :password_confirmation)
   end
 
 end

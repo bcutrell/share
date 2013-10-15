@@ -5,11 +5,8 @@
   <fieldset>
     <legend><%= controller.action_name.capitalize %> Member</legend>
 
-    <%= f.association :group, label: "Group Name" %>
-
     <%= f.input :group %>
     <%= f.input :password %>
-
 
     <div class="form-actions">
       <%= f.submit 'Join Group', :class => 'btn btn-primary' %>

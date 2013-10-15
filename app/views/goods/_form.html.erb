@@ -1,19 +1,21 @@
-<div class="row">
-  <div class="span6">
-    <%= simple_form_for [group, good], :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
-      <fieldset>
-        <legend><%= controller.action_name.capitalize %> Good </legend>
-
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :location %>
-        <%= f.file_field :image %>
-
-        <div class="form-actions">
-          <%= f.submit nil, :class => 'btn btn-primary' %>
-          <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
-        </div>
-      </fieldset>
-    <% end %>
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <%= simple_form_for [group, good], :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+        <fieldset>
+          <legend><%= controller.action_name.capitalize %> Good </legend>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :location %>
+          <%-# f.input :categories, as: :select, collection: Category.rooms %> 
+          <%= f.association :categories %>
+          <%= f.file_field :image, class: "file_field" %>
+          <div class="form-actions">
+            <%= f.submit nil, :class => 'btn btn-primary' %>
+            <%= link_to 'Cancel', home_dashboard_path, :class => 'btn' %>
+          </div>
+        </fieldset>
+      <% end %>
+    </div>
   </div>
 </div>

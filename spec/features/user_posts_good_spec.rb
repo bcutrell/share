@@ -17,7 +17,40 @@ feature 'posts an item', %Q{
 # * If I create a good publicly it can only be seen in the public group
 # * If I create a good privately it can only be seen in the private group
 
-  scenario 'I successfully post an item' do
+  # scenario 'I successfully post an item' do
+  #   user = FactoryGirl.create(:user)
+  #   sign_in_as(user)
+
+  #   click_link 'Post item'
+  #   fill_in 'Title', with: 'brand'
+  #   fill_in 'Description', with: 'spanking'
+  #   fill_in 'Location', with: 'new'
+  #   attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
+  #   click_on 'Create Good'
+    
+  #   expect(page).to have_content('Thanks for sharing')
+  # end
+
+  # scenario 'I post a private item' do 
+  #   user = FactoryGirl.create(:user, :in_group)
+  #   group = user.groups.first
+  #   sign_in_as(user)
+
+  #   visit group_path(group)
+  #   click_on "Add Item"
+  #   fill_in "Title", with: "chair"
+  #   fill_in "Description", with: "good for sitting on"
+  #   fill_in "Location", with: "Boston"
+  #   attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
+  #   click_on "Create Good"
+
+  #   expect(page).to have_content("Thanks for sharing")
+  #   expect(Good.last.private).to eql(true)
+  #   expect(Good.last.group).to eql(group)
+  # end
+
+  scenario 'I specify a category' do 
+    category = FactoryGirl.create(:category)
     user = FactoryGirl.create(:user)
     sign_in_as(user)
 
@@ -25,27 +58,10 @@ feature 'posts an item', %Q{
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
+    select(category.name, :from => 'Categories')
     attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
     click_on 'Create Good'
-    
-    expect(page).to have_content('Thanks for sharing')
-  end
 
-  scenario 'I post a private item' do 
-    user = FactoryGirl.create(:user, :in_group)
-    group = user.groups.first
-    sign_in_as(user)
-
-    visit group_path(group)
-    click_on "Add Item"
-    fill_in "Title", with: "chair"
-    fill_in "Description", with: "good for sitting on"
-    fill_in "Location", with: "Boston"
-    attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
-    click_on "Create Good"
-
-    expect(page).to have_content("Thanks for sharing")
-    expect(Good.last.private).to eql(true)
-    expect(Good.last.group).to eql(group)
-  end
+    expect(Good.first.categories.first.name).to eql(category.name)
+  end 
 end

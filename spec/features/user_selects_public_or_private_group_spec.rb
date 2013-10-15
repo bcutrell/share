@@ -35,7 +35,7 @@ So that I can access the inventories I am interested in
     click_on "Join Group"
 
     fill_in 'Group', with: group.name
-    fill_in 'Password', with: group.password_hash 
+    fill_in 'Password', with: 'password'
     click_on "Join Group"
 
     expect(page).to have_content("Welcome To The Group!")
