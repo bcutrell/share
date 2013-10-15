@@ -11,9 +11,6 @@ class Group < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :password 
 
-
-
-
   class << self
     def member_of(user)
       member_groups = []
