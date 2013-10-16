@@ -9,13 +9,13 @@
 @import "bootstrap-responsive";
 @import "font-awesome";
 
-// .color_logo:nth-child(1) 
+// .color_logo:nth-child(1)
 // {
 //   margin: 0;
 //   padding: 0;
 // }
 
-// .color_logo ul  
+// .color_logo ul
 // {
 //   margin-top: 7.5px;
 //   margin-bottom: 0px;
@@ -38,7 +38,7 @@
   padding: 0;
 }
 
-.box_two 
+.box_two
 {
   background-color: #81BCB4;
   height: 20px;
@@ -105,7 +105,7 @@
   margin: 0;
 }
 
-#main 
+#main
 {
   margin-left: 0;
   margin-right: 0;
@@ -213,12 +213,12 @@ line-height: 14px;
   background-color: #496D68
 }
 
-.show_group_list ul 
+.show_group_list ul
 {
 list-style: none;
 }
 
-i 
+i
 {
   margin-right: 10px;
 }
@@ -242,7 +242,26 @@ i
 .house_room
 {
   border:3px solid black;
-  height:150px;
+  height:100px;
+  width: 160px;
+  margin: 0
+}
+
+.house_body
+{
+  width:500px;
+}
+
+.house_roof
+{
+  width: 5px;
+  height: 0;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 120px solid #435258;
+  left: 270px;
+  top: 100px;
+  border-radius: 20px;
 }
 
 .house_room:nth-child(even)
@@ -284,4 +303,35 @@ i
 .show_good_row
 {
   margin-top: 20px
+}
+
+.bathroom:hover
+{
+  background-color:#C4DC79 ;
+}
+
+.hallway:hover
+{
+  background-color: #81BCB4;
+}
+
+.living:hover
+{
+  background-color:#D7D1C9;
+
+}
+
+.kitchen:hover
+{
+  background-color: #D7D1C9;
+}
+
+.foyer:hover
+{
+  background-color:#81BCB4;
+}
+
+.bedroom:hover
+{
+  background-color: #C4DC79;
 }
