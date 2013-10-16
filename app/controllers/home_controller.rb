@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 
   def house
-    @rooms = Category.includes(:goods).all
+    @rooms = Category.includes(:goods)
   end
 
 end
