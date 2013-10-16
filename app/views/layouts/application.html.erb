@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Share</title>
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,7 +19,7 @@
  -->
 
 <div class="container">
-  <%= image_tag "share_logo.png", class: "share_logo pull-left" %> 
+  <%= image_tag "share_logo.png", class: "share_logo pull-left" %>
 
   <ul class="nav nav-pills pull-right">
     <li class="pull-left <%= 'active' if current_page?(root_path)  %>">
@@ -48,7 +48,7 @@
 </div>
 
     <%= yield %>
- 
+
  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>
