@@ -1,59 +1,17 @@
 <!-- load all queries in one  -->
 
 <div class="container">
-<div class="house">
-<div class="row">
-  <div id="foyer" class="span4 house_room">
-        <a href="#foyerModal" role="button" class="btn" data-toggle="modal">
-        Foyer
-        </a>
-        <%= render partial:'modal',locals: {room: "Foyer", modal: 'foyerModal' } %>
-  </div>
-  <div id="living_room" class="span8 house_room">
-        <a href="#livingroomModal" role="button" class="btn" data-toggle="modal">
-        Living Room
-        </a>
-        <%= render partial:'modal',locals: {room: "Living Room", modal: 'livingroomModal' } %>
-  </div>
-</div>
-
-<div class="row">
-  <div id="hallway" class="span6 house_room">
-    <a href="#hallwaymodal" role="button" class="btn" data-toggle="modal">
-        Hallway
-        </a>
-        <%= render partial:'modal',locals: {room: "Hallway", modal: 'hallwaymodal' } %>
-  </div>
-
-  <div id="bedroom" class="span6 house_room">
-    <a href="#bedroomModal" role="button" class="btn" data-toggle="modal">
-    Bedroom
-    </a>
-    <%= render partial:'modal',locals: {room: "Bedroom", modal: 'bedroomModal'} %>
-  </div>
-</div>
-
-<div class="row">
-  <div id="kitchen" class="span10 house_room">
-   <a href="#kitchenModal" role="button" class="btn" data-toggle="modal">
-    Kitchen
-    </a>
-    <%= render partial:'modal',locals: {room: "Kitchen", modal: 'kitchenModal' } %>
-  </div>
-  <div id="bathroom" class="span2 house_room">
-    <a href="#bathroomModal" role="button" class="btn" data-toggle="modal">Bathroom
-    </a>
-    <%= render partial:'modal',locals: {room: "Bathroom", modal: 'bathroomModal'} %>
-  </div>
-  </div>
-</div>
-
-  <div class="row">
-    <div id="show_button" class="span2 show_button">
-      <button class="btn">Show All</button>
+  <div class="house">
+    <div class="row">
+      <%- @rooms.each do |room| -%>
+        <div id="<%= room.name.downcase %>" class="span4 house_room">
+          <a href="#<%= room.name.downcase %>Modal" role="button" class="btn" data-toggle="modal">
+            <%= room.name %>
+          </a>
+        </div>
+        <%= render 'modal', category: room %>
+      <%- end -%>
     </div>
-    <div id="storage" class="span4 trash pull-right"></div>
   </div>
-
 </div>
 

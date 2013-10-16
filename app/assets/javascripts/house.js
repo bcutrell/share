@@ -11,7 +11,7 @@ function house_hover(element, text){
   $(element).mouseleave(function(){
     $(element).removeClass("on_room");
     $('.house_text').hide();
-    });
+  });
 }
 
 function show_all(element, text){

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  
+
   def index
   end
 
@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   end
 
   def house
+    @rooms = Category.includes(:goods).all
   end
 
-  
 end

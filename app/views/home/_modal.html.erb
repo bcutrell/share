@@ -1,22 +1,24 @@
-<% @goods = Good.categorize(room) %>
-
-<div id="<%= modal %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="<%= category.name.downcase %>Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><%= room %></h3>
+
+    <h3 id="myModalLabel"><%= category.name %></h3>
   </div>
+
   <div class="modal-body">
-    <% if @goods.count == 0 %>
+    <% if category.goods.length > 0 %>
+      <% category.goods.each do |good| %>
+        <div class="span3 good_index">
+          <ul>
+            <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
+          </ul>
+        </div>
+      <% end %>
+    <% else %>
       <p>No goods in this category</p>
     <% end %>
-      <% @goods.each do |good| %>
-    <div class="span3 good_index">
-      <ul>
-        <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
-      </ul>
-    </div>
-  <% end %> 
   </div>
+
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
   </div>
