@@ -1,53 +1,57 @@
-<% @goods = Good.all %> 
 <div class="container">
 <div class="house">
 <div class="row">
-  <div id="foyer" class="span4 house_room"></div>
-  <div id="living_room" class="span8 house_room"></div>
-</div>
-
-<div class="row">
-  <div id="hallway" class="span6 house_room"></div>
-  <div id="bedroom" class="span6 house_room"></div>
-</div>
-
-<div class="row">
-  <div id="kitchen" class="span10 house_room"></div>
-  <div id="bathroom" class="span2 house_room"></div>
-</div>
-
-</div>
-
-<div class="row">
-  <div id="show_button" class="span2 show_button">
-    <button class="btn">Show All</button>
+  <div id="foyer" class="span4 house_room">
+        <a href="#foyerModal" role="button" class="btn" data-toggle="modal">
+        Foyer
+        </a>
+        <%= render partial:'modal',locals: {room: "Foyer", modal: 'foyerModal' } %>
   </div>
-  <div id="storage" class="span4 trash pull-right"></div>
+  <div id="living_room" class="span8 house_room">
+        <a href="#livingroomModal" role="button" class="btn" data-toggle="modal">
+        Living Room
+        </a>
+        <%= render partial:'modal',locals: {room: "Living Room", modal: 'livingroomModal' } %>
+  </div>
 </div>
 
-
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
- 
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
+<div class="row">
+  <div id="hallway" class="span6 house_room">
+    <a href="#hallwaymodal" role="button" class="btn" data-toggle="modal">
+        Hallway
+        </a>
+        <%= render partial:'modal',locals: {room: "Hallway", modal: 'hallwaymodal' } %>
   </div>
-  <div class="modal-body">
-      <% @goods.each do |good| %>
-    <div class="span3 good_index">
-      <ul>
-        <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
-      </ul>
+
+  <div id="bedroom" class="span6 house_room">
+    <a href="#bedroomModal" role="button" class="btn" data-toggle="modal">
+    Bedroom
+    </a>
+    <%= render partial:'modal',locals: {room: "Bedroom", modal: 'bedroomModal'} %>
+  </div>
+</div>
+
+<div class="row">
+  <div id="kitchen" class="span10 house_room">
+   <a href="#kitchenModal" role="button" class="btn" data-toggle="modal">
+    Kitchen
+    </a>
+    <%= render partial:'modal',locals: {room: "Kitchen", modal: 'kitchenModal' } %>
+  </div>
+  <div id="bathroom" class="span2 house_room">
+    <a href="#bathroomModal" role="button" class="btn" data-toggle="modal">Bathroom
+    </a>
+    <%= render partial:'modal',locals: {room: "Bathroom", modal: 'bathroomModal'} %>
+  </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div id="show_button" class="span2 show_button">
+      <button class="btn">Show All</button>
     </div>
-  <% end %> 
+    <div id="storage" class="span4 trash pull-right"></div>
   </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-  </div>
+
 </div>
 
-
-
-</div>

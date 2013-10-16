@@ -46,11 +46,19 @@ module Seeders
                 categories: "Kitchen"
               },
               {
+                title: "Bed Side Table",
+                location: "1 Patriot Pl, Foxboro, MA",
+                description: "Useful",
+                user: user,
+                image: "/app/assets/images/bed_side_table.jpg",
+                categories: "Bedroom"
+              },
+              {
                 title: "Bacon Towel",
                 location: "1 Patriot Pl, Foxboro, MA",
                 description: "God bless America",
                 user: user,
-                image: "/app/assets/images/bed_side_table.jpg",
+                image: "/app/assets/images/bacon_towel.jpg",
                 categories: "Bathroom"
               },
               {
