@@ -6,6 +6,7 @@ function house_hover(element, text){
         class: 'center house_text',
         text: text
     }).appendTo(element);
+  // $(element).toggle();
   });
   $(element).mouseleave(function(){
     $(element).removeClass("on_room");

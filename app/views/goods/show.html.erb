@@ -12,19 +12,13 @@
     <br>
     <h4>Location</h4>
     <%= @good.location %>
-
   </div>
 </div>
   <div class="row">
-<div class="span6">
-<p>ADD A CLAIM BUTTON AND GPS INFORMATION!</p>
+    <div class="span6">
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@good.location}%2C#{@good.location}" %>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@good.location}%2C#{@good.location}", class: "img-polaroid" %>
 
-</div>
+    </div>
   </div>
-
-
-
-
 </div>
