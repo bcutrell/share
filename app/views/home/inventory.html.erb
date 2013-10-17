@@ -1,10 +1,11 @@
-<% current_user.goods.each do |good| %>
-  <div class="span3 good_index">
-    <ul>
-      <li class="img-polaroid">
-        <%= image_tag good.image.thumb.url %>
-      </li>
-    </ul>
-  </div>
-<% end %> 
-
+<div class="container">
+  <% current_user.goods.each do |good| %>
+    <div class="span3 good_index">
+      <ul>
+        <li class="img-polaroid">
+          <%= image_tag good.image.thumb.url %>
+        </li>
+      </ul>
+    </div>
+  <% end %> 
+</div>

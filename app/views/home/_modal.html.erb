@@ -1,0 +1,25 @@
+<div id="<%= category.name.downcase.delete(' ') %>Modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+    <h3 id="myModalLabel"><%= category.name %></h3>
+  </div>
+
+  <div class="modal-body">
+    <% if category.goods.length > 0 %>
+      <% category.goods.each do |good| %>
+        <div class="span3 good_index">
+          <ul>
+            <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
+          </ul>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No goods in this category</p>
+    <% end %>
+  </div>
+
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>

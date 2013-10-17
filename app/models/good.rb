@@ -18,4 +18,20 @@ class Good < ActiveRecord::Base
   validates_presence_of :image
 
   mount_uploader :image, ImageUploader
+
+
+  class << self
+
+    def categorize(name)
+      categorized_goods = []
+      Good.all.each do |good|
+        if good.categories.first.name == name
+          categorized_goods << good
+        end
+      end
+      categorized_goods  
+    end
+
+  end
+
 end

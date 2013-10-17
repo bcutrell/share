@@ -1,16 +1,12 @@
 Share::Application.routes.draw do
-
-
-  resources :goods 
-
-
-
+  resources :goods
 
   devise_for :users
 
   get "home/dashboard"
   get "home/inventory"
   get "home/house"
+  get "home/map"
   root 'home#index'
 
   resources :groups do
@@ -59,7 +55,7 @@ resources :group_memberships
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

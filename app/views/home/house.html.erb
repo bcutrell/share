@@ -1,53 +1,16 @@
-<% @goods = Good.all %> 
 <div class="container">
-<div class="house">
-<div class="row">
-  <div id="foyer" class="span4 house_room"></div>
-  <div id="living_room" class="span8 house_room"></div>
-</div>
-
-<div class="row">
-  <div id="hallway" class="span6 house_room"></div>
-  <div id="bedroom" class="span6 house_room"></div>
-</div>
-
-<div class="row">
-  <div id="kitchen" class="span10 house_room"></div>
-  <div id="bathroom" class="span2 house_room"></div>
-</div>
-
-</div>
-
-<div class="row">
-  <div id="show_button" class="span2 show_button">
-    <button class="btn">Show All</button>
-  </div>
-  <div id="storage" class="span4 trash pull-right"></div>
-</div>
-
-
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
- 
-<!-- Modal -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Modal header</h3>
-  </div>
-  <div class="modal-body">
-      <% @goods.each do |good| %>
-    <div class="span3 good_index">
-      <ul>
-        <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good)  %></li>
-      </ul>
+    <div class="house_roof center span12">
     </div>
-  <% end %> 
+      <div class="house_body">
+      <%- @rooms.each do |room| -%>
+        <div id="<%= room.name.downcase.delete(' ') %>" class="span4 house_room <%= room.name.downcase %>">
+          <a href="#<%= room.name.downcase.delete(' ') %>Modal" role="button" class="btn center" data-toggle="modal">
+            <%= room.name %>
+          </a>
+        </div>
+        <%= render 'modal', category: room %>
+      <%- end -%>
+      </div>
   </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-  </div>
-</div>
 
 
-
-</div>
