@@ -11,7 +11,5 @@ class HomeController < ApplicationController
   end
 
   def map
-    @good = Good.all.first
-    @goods = Good.all
   end
 end

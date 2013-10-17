@@ -58,7 +58,7 @@ module Seeders
                 location: "3252 Rustic Dale Park, Chevy Chase, NJ",
                 description: "God bless America",
                 user: user,
-                image: "/app/assets/images/bacon_towel.jpg",
+                image: "/app/assets/images/bacon_towel.jpeg",
                 categories: "Bathroom"
               },
               {
