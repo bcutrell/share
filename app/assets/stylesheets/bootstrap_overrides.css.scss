@@ -1,9 +1,3 @@
-// $navbarBackground: #2c3e50;
-// $navbarBackgroundHighlight: #95a5a6;
-// $navbarText: #eee;
-// $navbarLinkColor: #eee;
-
-// @import "font-awesome";
 @import "bootstrap";
 @import "flat-ui";
 @import "bootstrap-responsive";
@@ -36,6 +30,18 @@
   width: 50px;
   margin: 0;
   padding: 0;
+}
+
+.form-inputs input
+{
+  display: inline
+}
+
+.alert
+{
+  margin:0;
+  background-color: #C3DC7A;
+  color: gray
 }
 
 .box_two
@@ -242,43 +248,25 @@ i
 .house_room
 {
   border:3px solid black;
-  height:100px;
-  width: 160px;
+  height:200px;
   margin: 0
-}
-
-.house_body
-{
-  width:500px;
 }
 
 .house_roof
 {
   width: 5px;
   height: 0;
-  border-left: 300px solid transparent;
-  border-right: 300px solid transparent;
+  border-left: 500px solid transparent;
+  border-right: 450px solid transparent;
   border-bottom: 120px solid #435258;
   left: 270px;
   top: 100px;
   border-radius: 20px;
 }
 
-.house_room:nth-child(even)
+.house_body
 {
-  margin-left:0
-}
-
-.on_room
-{
-  background-color: #eeeeee;
-}
-
-.trash
-{
-  margin:20px;
-  border:3px solid blue;
-  height:150px
+  margin-left: 20px
 }
 
 .show_button
@@ -307,7 +295,7 @@ i
 
 .bathroom:hover
 {
-  background-color:#C4DC79 ;
+  background-color:#C3DC7A;
 }
 
 .hallway:hover
@@ -318,7 +306,6 @@ i
 .living:hover
 {
   background-color:#D7D1C9;
-
 }
 
 .kitchen:hover
@@ -333,5 +320,12 @@ i
 
 .bedroom:hover
 {
-  background-color: #C4DC79;
+  background-color: #C3DC7A;
+}
+
+.bedroom a
+{
+margin-left: auto;
+margin-right: auto;
+display: inline
 }

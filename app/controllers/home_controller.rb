@@ -10,4 +10,8 @@ class HomeController < ApplicationController
     @rooms = Category.includes(:goods)
   end
 
+  def map
+    @good = Good.all.first
+    @goods = Good.all
+  end
 end

@@ -19,8 +19,9 @@
  -->
 
 <div class="container">
+  <a href="/">
   <%= image_tag "share_logo.png", class: "share_logo pull-left" %>
-
+  </a>
   <ul class="nav nav-pills pull-right">
     <li class="pull-left <%= 'active' if current_page?(root_path)  %>">
       <%= link_to "Home", root_path, class: "brand" %>

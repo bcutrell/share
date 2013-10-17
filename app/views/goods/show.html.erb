@@ -17,8 +17,49 @@
   <div class="row">
     <div class="span6">
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@good.location}%2C#{@good.location}", class: "img-polaroid" %>
-
     </div>
   </div>
 </div>
+
+
+<div class="container">
+<div id='map'></div>
+</div>
+
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+  <![endif]-->
+  <style>
+
+    #map { width:600px; height:400px; }
+  </style>
+
+<body>
+
+<script type='text/javascript'>
+
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([<%= @good.latitude %>, <%= @good.longitude %> ], 15);
+
+L.mapbox.markerLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        // coordinates here are in longitude, latitude order because
+        // x, y is the standard for GeoJSON and many formats
+        coordinates: [<%= @good.longitude %>, <%= @good.latitude %>]
+    },
+       properties: {
+        title: 'Location',
+        description: '<%= @good.location %>',
+        // one can customize markers by adding simplestyle properties
+        // http://mapbox.com/developers/simplestyle/
+        'marker-size': 'large',
+        'marker-color': '#435258'
+    }
+}).addTo(map);
+</script>
