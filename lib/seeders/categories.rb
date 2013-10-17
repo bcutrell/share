@@ -1,5 +1,5 @@
 module Seeders
-  module Categories 
+  module Categories
 
     class << self
 
@@ -35,9 +35,6 @@ module Seeders
               },
               {
                 name: "Bathroom",
-              },
-              {
-                name: "Storage",
               },
             ]
       end

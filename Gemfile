@@ -65,6 +65,10 @@ group :test, :development do
   gem 'timecop'
 end
 
+group :development do
+  gem 'rack-mini-profiler'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

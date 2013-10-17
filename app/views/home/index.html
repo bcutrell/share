@@ -1,9 +1,9 @@
 
 <div class="hero clearfix">
   <div class="container">
-    <div class="span6 clear_box">Hello!</div>  
+    <div class="span6 clear_box">Hello!</div>
       <div class="span4 white_box pull-right">
-      <%- if user_signed_in? -%>  
+      <%- if user_signed_in? -%>
         <h1>Welcome</h1>
       <%- else -%>
         <%= simple_form_for(User.new, :as => :user, :url => user_registration_path) do |f| %>
@@ -34,7 +34,7 @@
     </div>
     <div class="row icon_row">
       <div class="span4">
-        <i class="icon-picture icon-4x icon-border"></i> Pictures are required
+        <i class="icon-picture icon-4x icon-border"></i><%= link_to "Map Beta", home_map_path, :class => 'btn' %>
       </div>
       <div class="span4">
         <i class="icon-archive icon-4x icon-border"></i> <%= link_to "House Beta", home_house_path, :class => 'btn' %>
