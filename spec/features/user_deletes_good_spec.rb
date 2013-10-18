@@ -15,15 +15,13 @@ feature 'user creates a group', %Q{
         user = FactoryGirl.create(:user)
         good = FactoryGirl.create(:good, :with_image)
         user.goods << good
-        prev_count = Group.count
+        good.user = user
+        prev_count = Good.count
 
         sign_in_as(user)
-        click_on 'Inventory'
-        within(:css, ".group_password") do
-              click_on
-        end
-        click_on 'delete'
+        visit "/goods/#{good.id}"
+        click_on 'Remove Good'
 
-        expect(Group.count).to eql(prev_count - 1)
+        expect(Good.count).to eql(prev_count - 1)
     end
 end
