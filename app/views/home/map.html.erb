@@ -1,0 +1,44 @@
+  <style>
+
+    #map { width:100%; height:600px; }
+  </style>
+
+
+<div class="container">
+<div id='map'></div>
+</div>
+
+
+
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+
+
+
+<script type='text/javascript'>
+
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([38, -97], 4);
+    <% @goods = Good.all %>
+<% @goods.each do |good| %>
+        <% if  good.longitude.present? %>
+L.mapbox.markerLayer({
+
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [<%= good.longitude %>, <%= good.latitude %>]
+    },
+       properties: {
+        title: 'Location',
+        description: '<%= good.location %>',
+        'marker-size': 'large',
+        'marker-color': '#435258'
+    }
+}).addTo(map);
+    <% end %>
+<% end %>
+</script>
+
+
+
