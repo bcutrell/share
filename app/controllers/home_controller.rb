@@ -10,4 +10,6 @@ class HomeController < ApplicationController
     @rooms = Category.includes(:goods)
   end
 
+  def map
+  end
 end

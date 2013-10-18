@@ -31,7 +31,7 @@ module Seeders
             [
               {
                 title: "Baby Table",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "9642 Clear Butterfly Line, Point Truth, PA",
                 description: "For Babies!",
                 user: user,
                 image: "/app/assets/images/baby_table.jpg",
@@ -39,7 +39,7 @@ module Seeders
               },
               {
                 title: "Bacon Machine",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "11001 Owings Mills Blvd, Owings Mills, MD",
                 description: "Dream come true!",
                 user: user,
                 image: "/app/assets/images/bacon_machine.png",
@@ -47,7 +47,7 @@ module Seeders
               },
               {
                 title: "Bed Side Table",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "One Paul Brown Stadium, Cincinnati, OH",
                 description: "Useful",
                 user: user,
                 image: "/app/assets/images/bed_side_table.jpg",
@@ -55,15 +55,15 @@ module Seeders
               },
               {
                 title: "Bacon Towel",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "3252 Rustic Dale Park, Chevy Chase, NJ",
                 description: "God bless America",
                 user: user,
-                image: "/app/assets/images/bacon_towel.jpg",
+                image: "/app/assets/images/bacon_towel.jpeg",
                 categories: "Bathroom"
               },
               {
                 title: "Nice Chair",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "7500 SW 30th Street, Davie, FL",
                 description: "Good for sitting",
                 user: user,
                 image: "/app/assets/images/chair.jpg",
@@ -71,7 +71,7 @@ module Seeders
               },
               {
                 title: "Changing Table",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "1220 Harbor Bay Parkway, Oakland, CA",
                 description: "For Babies!",
                 user: user,
                 image: "/app/assets/images/changing_table.jpg",
@@ -79,7 +79,7 @@ module Seeders
               },
               {
                 title: "Dark Couch",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "1770 Rocky Bear Plaza, Spirit Lake, WV",
                 description: "Classy",
                 user: user,
                 image: "/app/assets/images/dark_couch.jpeg",
@@ -87,7 +87,7 @@ module Seeders
               },
               {
                 title: "Awesome Toliet",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "8196 Grand Pioneer Road, Crump Town, FL",
                 description: "Fish Toliet",
                 user: user,
                 image: "/app/assets/images/fish_toliet.jpg",
@@ -95,7 +95,7 @@ module Seeders
               },
               {
                 title: "Patriots bean bag",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "11220 NE 53rd Street, Kirkland, WA",
                 description: "Where was this when I was growing up",
                 user: user,
                 image: "/app/assets/images/pats_bean_bag.jpg",
@@ -103,7 +103,7 @@ module Seeders
               },
               {
                 title: "Patriots Chair",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "8030 Umber Brook Square, Scienceville, IA",
                 description: "Comfy",
                 user: user,
                 image: "/app/assets/images/pats_chair.jpg",
@@ -111,7 +111,7 @@ module Seeders
               },
               {
                 title: "Pats Tissue Box",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "711 Louisiana, 33rd Floor, Houston, TX",
                 description: "gesundheit",
                 user: user,
                 image: "/app/assets/images/pats_tissue_box.jpeg",
@@ -119,7 +119,7 @@ module Seeders
               },
               {
                 title: "Sandwhich Chair",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "13665 Broncos Parkway, Englewood, CO",
                 description: "Yummy",
                 user: user,
                 image: "/app/assets/images/sandwhich_char.jpg",
@@ -127,7 +127,7 @@ module Seeders
               },
               {
                 title: "Star Wars",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "8052 Little Centre, Minneapolis, NJ",
                 description: "Epic",
                 user: user,
                 image: "/app/assets/images/star_wars_kitchen.jpg",
@@ -135,7 +135,7 @@ module Seeders
               },
               {
                 title: "Legendary Table",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "One Rams Way, St. Louis, MO",
                 description: "There is not try",
                 user: user,
                 image: "/app/assets/images/star_wars_table.jpg",
@@ -143,12 +143,12 @@ module Seeders
               },
               {
                 title: "Toaster",
-                location: "1 Patriot Pl, Foxboro, MA",
+                location: "7635 Colonial Parkway, Burnt Cane Crossing, CT",
                 description: "A must",
                 user: user,
                 image: "/app/assets/images/toaster.jpg",
                 categories: "Kitchen"
-              },                 
+              },
             ]
       end
 

@@ -1,17 +1,16 @@
-<!-- load all queries in one  -->
-
 <div class="container">
-  <div class="house">
-    <div class="row">
+    <div class="house_roof center span12">
+    </div>
+      <div class="house_body">
       <%- @rooms.each do |room| -%>
-        <div id="<%= room.name.downcase %>" class="span4 house_room">
-          <a href="#<%= room.name.downcase %>Modal" role="button" class="btn" data-toggle="modal">
+        <div id="<%= room.name.downcase.delete(' ') %>" class="span4 house_room <%= room.name.downcase %>">
+          <a href="#<%= room.name.downcase.delete(' ') %>Modal" role="button" class="btn center" data-toggle="modal">
             <%= room.name %>
           </a>
         </div>
         <%= render 'modal', category: room %>
       <%- end -%>
-    </div>
+      </div>
   </div>
-</div>
+
 

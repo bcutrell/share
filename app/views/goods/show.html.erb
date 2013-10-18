@@ -17,8 +17,44 @@
   <div class="row">
     <div class="span6">
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@good.location}%2C#{@good.location}", class: "img-polaroid" %>
-
     </div>
   </div>
 </div>
+
+
+<div class="container">
+<div id='map'></div>
+</div>
+
+<% if @good.user == current_user %>
+  <div class="container">
+    <%= link_to 'Remove Good', good_path(@good), :method => :delete, class: 'btn' %>
+  </div>
+<% end %>
+
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <style>
+
+    #map { width:600px; height:400px; }
+  </style>
+
+<script type='text/javascript'>
+
+var map = L.mapbox.map('map', 'examples.map-9ijuk24y')
+    .setView([<%= @good.latitude %>, <%= @good.longitude %> ], 15);
+
+L.mapbox.markerLayer({
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [<%= @good.longitude %>, <%= @good.latitude %>]
+    },
+       properties: {
+        title: 'Location',
+        description: '<%= @good.location %>',
+        'marker-size': 'large',
+        'marker-color': '#435258'
+    }
+}).addTo(map);
+</script>
