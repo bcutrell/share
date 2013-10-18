@@ -39,7 +39,7 @@ module Seeders
               },
               {
                 title: "Bacon Machine",
-                location: "9580 Golden Bluff Hill, Unadilla, MS",
+                location: "11001 Owings Mills Blvd, Owings Mills, MD",
                 description: "Dream come true!",
                 user: user,
                 image: "/app/assets/images/bacon_machine.png",
@@ -47,7 +47,7 @@ module Seeders
               },
               {
                 title: "Bed Side Table",
-                location: "981 Quiet Elk Wharf, Catawissa, WV",
+                location: "One Paul Brown Stadium, Cincinnati, OH",
                 description: "Useful",
                 user: user,
                 image: "/app/assets/images/bed_side_table.jpg",
@@ -63,7 +63,7 @@ module Seeders
               },
               {
                 title: "Nice Chair",
-                location: "8437 Broad Pathway, Bushnell, IA",
+                location: "7500 SW 30th Street, Davie, FL",
                 description: "Good for sitting",
                 user: user,
                 image: "/app/assets/images/chair.jpg",
@@ -71,7 +71,7 @@ module Seeders
               },
               {
                 title: "Changing Table",
-                location: "8728 Harvest Lake Meadow, Bird's Point, IA",
+                location: "1220 Harbor Bay Parkway, Oakland, CA",
                 description: "For Babies!",
                 user: user,
                 image: "/app/assets/images/changing_table.jpg",
@@ -95,7 +95,7 @@ module Seeders
               },
               {
                 title: "Patriots bean bag",
-                location: "2180 Velvet Pond Cape, Scituate, ME",
+                location: "11220 NE 53rd Street, Kirkland, WA",
                 description: "Where was this when I was growing up",
                 user: user,
                 image: "/app/assets/images/pats_bean_bag.jpg",
@@ -103,7 +103,7 @@ module Seeders
               },
               {
                 title: "Patriots Chair",
-                location: "8030 Umber Brook Square, Scienceville, IA,",
+                location: "8030 Umber Brook Square, Scienceville, IA",
                 description: "Comfy",
                 user: user,
                 image: "/app/assets/images/pats_chair.jpg",
@@ -111,7 +111,7 @@ module Seeders
               },
               {
                 title: "Pats Tissue Box",
-                location: "8086 Fallen Bend, Voltaire, CT",
+                location: "711 Louisiana, 33rd Floor, Houston, TX",
                 description: "gesundheit",
                 user: user,
                 image: "/app/assets/images/pats_tissue_box.jpeg",
@@ -119,7 +119,7 @@ module Seeders
               },
               {
                 title: "Sandwhich Chair",
-                location: "6124 Thunder Oak Front, Amazon, CT",
+                location: "13665 Broncos Parkway, Englewood, CO",
                 description: "Yummy",
                 user: user,
                 image: "/app/assets/images/sandwhich_char.jpg",
@@ -135,7 +135,7 @@ module Seeders
               },
               {
                 title: "Legendary Table",
-                location: "8210 Pleasant Pony Circuit, Hazenmore, NE",
+                location: "One Rams Way, St. Louis, MO",
                 description: "There is not try",
                 user: user,
                 image: "/app/assets/images/star_wars_table.jpg",

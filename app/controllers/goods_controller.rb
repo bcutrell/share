@@ -10,7 +10,7 @@ class GoodsController < ApplicationController
 
   def create
     build_good
-    @good.user = current_user 
+    @good.user = current_user
     if @good.save
       flash[:notice] = "Thanks for sharing"
       redirect_to home_dashboard_path
@@ -21,6 +21,13 @@ class GoodsController < ApplicationController
 
   def show
     @good = Good.find(params[:id])
+  end
+
+  def destroy
+    @good = Good.find(params[:id])
+    @good.destroy
+    flash[:notice] = "Good deleted"
+    redirect_to home_inventory_path
   end
 
   protected

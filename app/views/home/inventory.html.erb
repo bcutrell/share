@@ -3,9 +3,10 @@
     <div class="span3 good_index">
       <ul>
         <li class="img-polaroid">
-          <%= image_tag good.image.thumb.url %>
+          <%= link_to "#{image_tag good.image.thumb.url}".html_safe, good_path(good) %>
         </li>
       </ul>
     </div>
-  <% end %> 
+  <% end %>
 </div>
+
