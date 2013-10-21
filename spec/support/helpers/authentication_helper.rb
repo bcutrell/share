@@ -10,12 +10,12 @@ module AuthenticationHelper
   def add_public_good
     visit home_dashboard_path
     click_on 'Public'
-    click_on 'Post item'
+    click_on 'Add Good'
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
     attach_file('good_image', "#{Rails.root}/spec/support/images/test.jpg")
-    click_button 'Create Good'  
+    click_button 'Create Good'
   end
 
   def add_group

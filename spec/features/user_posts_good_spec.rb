@@ -21,7 +21,7 @@ feature 'posts an item', %Q{
     user = FactoryGirl.create(:user)
     sign_in_as(user)
 
-    click_link 'Post item'
+    click_link 'New Good'
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
@@ -37,7 +37,7 @@ feature 'posts an item', %Q{
     sign_in_as(user)
 
     visit group_path(group)
-    click_on "Add Item"
+    click_on "New Good"
     fill_in "Title", with: "chair"
     fill_in "Description", with: "good for sitting on"
     fill_in "Location", with: "Boston"
@@ -54,7 +54,7 @@ feature 'posts an item', %Q{
     user = FactoryGirl.create(:user)
     sign_in_as(user)
 
-    click_link 'Post item'
+    click_link 'New Good'
     fill_in 'Title', with: 'brand'
     fill_in 'Description', with: 'spanking'
     fill_in 'Location', with: 'new'
