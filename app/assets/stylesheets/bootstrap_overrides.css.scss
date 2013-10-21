@@ -1,30 +1,9 @@
 
-@import "bootstrap";
-@import "flat-ui";
-@import "bootstrap-responsive";
-@import "font-awesome";
-
-
-// .color_logo:nth-child(1)
-// {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .color_logo ul
-// {
-//   margin-top: 7.5px;
-//   margin-bottom: 0px;
-//   margin-left: 30px
-// }
-
 .share_logo
 {
   height:54px;
-  // width: 300px;
-  // margin-left: 20px
-
 }
+
 .box_one
 {
   background-color: #435258;
@@ -113,6 +92,11 @@
 .good_index ul {
   padding: 0;
   margin: 0;
+}
+
+.logo_caption
+{
+  font-size: 20px
 }
 
 #main

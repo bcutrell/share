@@ -1,7 +1,11 @@
 
 <div class="hero clearfix">
   <div class="container">
-    <div class="span6 clear_box">Hello!</div>
+    <div class="span6 clear_box">
+      <h3>Announcing two news ways to categorize and track your goods</h3>
+      <%= link_to "Map Beta", home_map_path, :class => 'btn' %>
+      <%= link_to "House Beta", home_house_path, :class => 'btn' %>
+    </div>
       <div class="span4 white_box pull-right">
       <%- if user_signed_in? -%>
         <h1>Welcome</h1>
@@ -20,24 +24,31 @@
 
 <div class="container">
   <div class="row icon_row">
-    <div class="span4">
-  <h1>What we do</h1>
+    <div class="span8">
+  <h1>Share is a property gifting application that allows users to post public and private goods</h1>
     </div>
       </div>
     <div class="row icon_row">
-      <div class="span4">
-        <i class="icon-group icon-4x icon-border"></i> You can create Groups
+      <div class="span5">
+        <p class="logo_caption"><i class="icon-group icon-4x icon-border pull-left"></i>
+        Friend having their first child? Nephew going to college? Create groups for your friends and family
+        </p>
       </div>
-      <div class="span4">
-        <i class="icon-money icon-4x icon-border"></i> You do not need money
+      <div class="span5">
+        <p class="logo_caption"><i class="icon-money icon-4x icon-border pull-left"></i> No credit card required
+        </p>
       </div>
     </div>
     <div class="row icon_row">
-      <div class="span4">
-        <i class="icon-picture icon-4x icon-border"></i><%= link_to "Map Beta", home_map_path, :class => 'btn' %>
+      <div class="span5">
+        <p class="logo_caption"><i class="icon-picture icon-4x icon-border pull-left"></i>
+          All posted goods must have a picture
+        </p>
       </div>
-      <div class="span4">
-        <i class="icon-archive icon-4x icon-border"></i> <%= link_to "House Beta", home_house_path, :class => 'btn' %>
+      <div class="span5">
+        <p class="logo_caption"><i class="icon-archive icon-4x icon-border pull-left"></i>
+          Use Share to create an inventory of goods you no longer want
+        </p>
       </div>
   </div>
 </div>

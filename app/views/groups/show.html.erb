@@ -1,12 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class= "span2 center">
-      <%= @group.name %>      
-    </div>
-  </div>
-  <div class="row">
-    <div class= "span4 center">
-      <%= link_to "Add Item", new_group_good_path(@group), class: 'btn center' %>
+    <div class= "span4 center clear_box">
+      <h1>
+      <%= @group.name %>
+    </h1>
+    <%= link_to "New Good", new_group_good_path(@group), class: 'btn center' %>
     </div>
   </div>
 
@@ -18,7 +16,9 @@
               <li class="img-polaroid"> <%= link_to "#{image_tag good.image.thumb.url}".html_safe, group_goods_path(good) %></li>
             </ul>
           </div>
-      <% end %> 
-    <% end %> 
+      <% end %>
+      <% else %>
+      <h2>No goods in this group</h2>
+    <% end %>
   </div>
 </div>
