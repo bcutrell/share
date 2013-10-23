@@ -3,11 +3,13 @@
     </div>
       <div class="house_body">
       <%- @rooms.each do |room| -%>
+        <a href="#<%= room.name.downcase.delete(' ') %>Modal" role="button" data-toggle="modal">
         <div id="<%= room.name.downcase.delete(' ') %>" class="span4 house_room <%= room.name.downcase %>">
-          <a href="#<%= room.name.downcase.delete(' ') %>Modal" role="button" class="btn center" data-toggle="modal">
-            <%= room.name %>
-          </a>
+        <button class="btn">
+          <%= room.name %>
+        </button>
         </div>
+      </a>
         <%= render 'modal', category: room %>
       <%- end -%>
       </div>
