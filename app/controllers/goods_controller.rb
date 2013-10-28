@@ -31,11 +31,11 @@ class GoodsController < ApplicationController
   end
 
   protected
-  def reg_params
+  def good_params
     params.require(:good).permit(:title, :description, :location, :image, :user_id, category_ids: [])
   end
 
   def build_good
-    @good = Good.new(reg_params)
+    @good = Good.new(good_params)
   end
 end
