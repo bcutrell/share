@@ -3,7 +3,7 @@ class GroupGoodsController < GoodsController
 
   protected
   def build_good
-    @good = @group.goods.build(reg_params)
+    @good = @group.goods.build(good_params)
     @good.private = true
     @good.user = current_user
   end

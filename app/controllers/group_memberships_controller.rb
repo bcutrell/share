@@ -5,19 +5,14 @@ class GroupMembershipsController < ApplicationController
   end
 
   def index
-    @group_members = GroupMembership.all 
+    @group_members = GroupMembership.all
   end
 
   def create
-    @group_member = current_user.group_memberships.build(reg_params)
+    @group_member = current_user.group_memberships.build(group_membership_params)
     @group = Group.find_by_name(params["group_membership"]["group"])
-
-    # group_name = params["group_membership"]["group"]    
-    # password = params["group_membership"]["password"]
-    # @group ||= Group.where(name: group_name, password_hash: password).first
-    
     if @group && @group.authenticate(params["group_membership"]["password"])
-      @group_member.group = @group 
+      @group_member.group = @group
       @group_member.save
       flash[:notice] = "Welcome To The Group!"
       redirect_to home_dashboard_path
@@ -27,11 +22,9 @@ class GroupMembershipsController < ApplicationController
     end
   end
 
-  # somalianpirates
-
   protected
-  def reg_params
-    params.require(:group_membership).permit(:group_id, :user_id) 
+  def group_membership_params
+    params.require(:group_membership).permit(:group_id, :user_id)
   end
 
 end
